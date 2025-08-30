@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyde Park Developments</title>
+    <meta name="description"
+        content="بريميوم بروبرتيز - خبرة 20+ سنة في تطوير وتسليم الوحدات السكنية الفاخرة. نوفر مساحات متنوعة، أنظمة سداد مرنة حتى 6 سنوات، ومشاريع في أفضل المواقع لراحة واستثمار مضمون.">
+    <meta name="keywords"
+        content="عقارات فاخرة, شقق للبيع, استثمار عقاري, مشروعات سكنية, أقساط 6 سنوات, بريميوم بروبرتيز, وحدات سكنية, تسليم فوري, أفضل مواقع سكنية, رضا العملاء">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph for Hyde Park -->
+    <meta property="og:title" content="هايد بارك | حياة متكاملة في قلب التجمع الخامس">
+    <meta property="og:description"
+        content="استمتع بمساحات خضراء شاسعة وخدمات متكاملة داخل هايد بارك. خطط سداد مرنة حتى 8 سنوات، وموقع استراتيجي في التجمع الخامس.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourwebsite.com/images/hyde-park-og.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/hyde-park">
+    <meta property="og:locale" content="ar_AR">
+
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="main.js" as="script">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/imgs/logo.png" loading="lazy" alt="Hyde Park Logo">
+            </a>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- قسم البطل (Hero Section) -->
+    <section id="home" class="hero">
+        <!-- Lazy-loaded background image -->
+        <img src="assets/imgs/hero.jpg" alt="هايد بارك للتطوير العقاري" class="hero-bg-img" loading="lazy" />
+
+        <!-- Overlay for better text readability (optional) -->
+        <div class="hero-overlay"></div>
+
+        <!-- Content centered -->
+        <div class="hero-content">
+            <h1>هايد بارك للتطوير العقاري</h1>
+            <p>
+                هايد بارك للتطوير العقاري تخلق أساليب حياة نابضة بالحياة
+                ومجتمعات مليئة بالضيافة تجمع الناس معًا.
+                اكتشف المشاريع السكنية المميزة في أفضل المواقع،
+                مع رفاهية لا مثيل لها، ومرافق عصرية،
+            </p>
+            <a href="#projects" class="cta-button">استكشف المشاريع</a>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">تواصل معنا</h2>
+
+            <div class="contact-content fade-in">
+                <img src="assets/imgs/hydeparkplan.jpg" loading="lazy" alt="Phone" class="contact-image">
+
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event,' Hyde Park All')">
+                    <p style="text-align: center;">سوف نقوم بالاتصال بك في أقرب وقت ممكن.</p>
+
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="اكتب رقم هاتفك" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">اطلب استشارة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">اكتشف مشاريعنا المتميزة</h2>
+
+            <div class="projects-grid fade-in">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/imgs/newcairo.jpg" alt="Hyde Park" loading="lazy">
+                    </div>
+                    <div class="project-content">
+
+                        <h3 class="project-title"> HYDE PARK
+                            - القاهرة الجديدة</h3>
+
+                        <p class="project-description">
+                            يقع في موقع استراتيجي داخل شارع التسعين الرئيسي بمنطقة التجمع الخامس في القاهرة الجديدة،
+                            ليمنحك حياة عصرية متكاملة تجمع بين الراحة، الخصوصية، والخدمات المتنوعة.
+                        </p>
+                        <ul class="project-features">
+                            <li>مدارس عالمية ومباني إدارية</li>
+                            <li>أمن وحراسة على مدار اليوم</li>
+                            <li>كاميرات مراقبة حديثة</li>
+                            <li>مطاعم وكافيهات راقية</li>
+                            <li>أماكن ترفيهية للأطفال</li>
+                            <li>لاند سكيب ومساحات خضراء واسعة</li>
+                            <li>مول تجاري ضخم</li>
+                            <li>مركز طبي ومستشفيات</li>
+                            <li>نادي صحي متكامل</li>
+                            <li>جيم وسبا وتراك للمشي</li>
+                            <li>نادي صحي ضخم</li>
+
+
+                        </ul>
+                        <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
+                        </div>
+                        <button class="project-button" onclick="setSheetAndOpen('newcairo')">سجّل اهتمامك</button>
+                    </div>
+                </div>
+
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/imgs/october.jpg" alt="Hyde Park" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Garden Lakes - مدينة هايد بارك 6 أكتوبر</h3>
+                        <p class="project-description">
+                            في قلب مدينة أكتوبر التي تتسم بالحيوية والنشاط ويتوفر بها كافة الخدمات المختلفة.
+                            يقع المشروع بالقرب من أشهر المولات مثل مول مصر، مول العرب، ومول أركان.
+                            كما يجاور جاليريا 40، بارك ستريت، وأندريا الشيخ زايد.
+                            يبعد دقائق قليلة عن المتحف المصري الكبير والأهرامات،
+                        </p>
+
+                        <ul class="project-features">
+                            <li>كلوب هاوس على مساحة ضخمة</li>
+                            <li>تراكات طويلة للمشي والجري وركوب الدراجات</li>
+                            <li>منطقة تجارية على مساحة 8 فدان</li>
+                            <li>منتزهات وحدائق كبيرة</li>
+                            <li>نادي صحي ضخم</li>
+                            <li>ملاعب رياضية كبيرة</li>
+                            <li>هايبر ماركت على مساحة كبيرة</li>
+                            <li>جيم رياضي على مساحة كبيرة</li>
+                            <li>مطاعم وكافيهات</li>
+                        </ul>
+                        <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
+                        </div>
+
+                        <button class="project-button" onclick="setSheetAndOpen('Gardens Lakes')">سجّل اهتمامك</button>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/imgs/seashor.jpg" alt="Hyde Park" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Seashore - هايد بارك الساحل الشمالي</h3>
+                        <p class="project-description">
+                            يقع في منطقة رأس الحكمة على أجمل سواحل البحر الأبيض المتوسط الذي يتميز بمياهه الفيروزية
+                            ورماله البيضاء الناعمة وسمائه الزرقاء الصافية.
+                            يقترب المشروع من أهم الطرق والمحاور الرئيسية مثل طريق الإسكندرية – مرسى مطروح الصحراوي
+                            عند الكيلو 210.
+                        </p>
+
+                        <ul class="project-features">
+                            <li>منطقة ألعاب مميزة للأطفال</li>
+                            <li>مجموعة من حمامات السباحة المميزة</li>
+                            <li>مسجد بتصميم إسلامي أنيق</li>
+                            <li>مطاعم وكافيهات</li>
+                            <li>مولدات احتياطية للطاقة تعمل تلقائيًا</li>
+                            <li>شاطئ مبهر بطول 550 متر</li>
+                            <li>مناظر طبيعية خلابة</li>
+                            <li>أفضل مناطق للتسوق</li>
+                            <li>كلوب هاوس راقي</li>
+                            <li>أماكن مخصصة لحفلات الشواء</li>
+                        </ul>
+                        <div class="project-price"> Chalet, Duplex, Penthouses, Townhouses, Villas
+                        </div>
+
+                        <button class="project-button" onclick="setSheetAndOpen('Seashore')">سجّل اهتمامك</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in"> قصتنا و نظام الدفع</h2>
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <h2 class="section-title fade-in"> عننا</h2>
+
+                    <p>
+                        تبدأ قصة هايد بارك للتطوير العقاري برؤية تهدف إلى إنشاء مساحات سكنية استثنائية
+                        ومجتمعات نابضة بالحياة في مصر.
+                        بدافع شغفنا بالتميز والتزامنا بالابتكار،
+                        انطلقنا في رحلة لإعادة صياغة مشهد التطوير العقاري
+                        وتقديم تجارب لا مثيل لها لعملائنا.
+                    </p>
+
+                    <p>
+                        تبدأ قصة هايد بارك للتطوير العقاري برؤية تهدف إلى إنشاء مساحات سكنية استثنائية
+                        ومجتمعات نابضة بالحياة في مصر.
+                        بدافع شغفنا بالتميز والتزامنا بالابتكار،
+                        انطلقنا في رحلة لإعادة صياغة مشهد التطوير العقاري
+                        وتقديم تجارب لا مثيل لها لعملائنا.
+                    </p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">1000</div>
+                        <div class="stat-label">مساحات ممتنوعة </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">سنوات أقساط</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10%</div>
+                        <div class="stat-label">مقدم فقط</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">✔</div>
+                        <div class="stat-label">تسليم فوري</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- قصتنا -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">تواصل معنا</h2>
+
+            <div class="contact-content fade-in">
+                <div class="">
+                    <h3>جاهز للعثور على منزل أحلامك؟</h3>
+                    <p>
+                        فريقنا المتخصص موجود لمساعدتك في اختيار العقار المثالي الذي يتوافق مع
+                        أسلوب حياتك وأهدافك الاستثمارية. تواصل معنا اليوم لحجز معاينة خاصة أو
+                        لمعرفة المزيد عن مشاريعنا الحصرية.
+                    </p>
+
+                    <p>
+                        نحن نقدم استشارات شخصية، خطط سداد مرنة، ودعم شامل بعد البيع لضمان أن
+                        رحلتك العقارية معنا ستكون مريحة ومجزية.
+                    </p>
+
+                    <!-- ✅ الفقرة التعريفية عن الشركة -->
+                    <p class="about-company">
+                        تأسست الشركة عام 2007 بواسطة <strong>داماك العقارية</strong>، ثم استحوذت
+                        عليها <strong>هايد بارك للتطوير</strong> في عام 2011 لتصبح واحدة من أبرز
+                        شركات التطوير العقاري السكني والتجاري والترفيهي في مصر.
+                        نحن المطورون لمشروعات كبرى مثل: <strong>هايد بارك القاهرة الجديدة، بيزنس ديستريكت، جاردن ليكس،
+                            تاوني، وسي شور.</strong>
+                    </p>
+                </div>
+
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event,' Hyde Park All')">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="اكتب رقم هاتفك" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">اطلب استشارة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Icons -->
+    <div class="floating-icons">
+        <!-- ✅ أيقونة واتساب -->
+        <a href="https://wa.me/201234567890?text=مرحبا،%20اريد%20الاستفسار%20عن%20مشروعكم." target="_blank"
+            class="whatsapp" aria-label="WhatsApp">
+            <img src="assets/imgs/whatsapp.png" loading="lazy" alt="WhatsApp">
+        </a>
+
+        <!-- ✅ أيقونة تليفون -->
+        <a href="tel:+201050564000" class="phone" aria-label="Phone">
+            <img src="assets/imgs/phone-call.png" loading="lazy" alt="Phone">
+        </a>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© Hyde Park Developments 2025 - All rights reserved </p>
+        </div>
+    </footer>
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Form: sheet will be passed via handleSubmit('default-sheet') -->
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event, 'Hyde Park All')">
+                    <h5 class="modal-title text-center mt-3 " id="modal-title">
+                        سجّل اهتمامك بمشروع <strong><span id="displayedProject">غير معروف</span></strong>
+                    </h5>
+                    <h4 style="text-align: center;"> سوف نقوم بالاتصال بك في أقرب وقت ممكن</h4>
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" name="name" placeholder="اكتب اسمك " required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="اكتب رقم هاتفك" required>
+                    </div>
+
+                    <!-- Hidden field: use this to override sheet if needed -->
+                    <input type="hidden" name="project" value="none">
+
+                    <button type="submit" class="submit-btn">اطلب استشارة</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <span>↑</span>
+    </div>
+
+
+    <!-- External JavaScript -->
+    <script src="main.js" defer></script>
+
+    <!-- Structured Data for SEO -->
+    <!-- <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Premium Properties",
+        "description": "Luxury real estate development company specializing in premium residential projects",
+        "url": "https://premiumproperties.com",
+        "telephone": "+1-555-PREMIUM",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Luxury Avenue",
+            "addressLocality": "Metro City",
+            "addressRegion": "State",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "areaServed": "Metro City",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Premium Property Listings",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Residence",
+                        "name": "Azure Heights",
+                        "description": "42-story luxury tower with panoramic city views"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Residence",
+                        "name": "Emerald Gardens",
+                        "description": "Luxury villas with private gardens and pools"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Residence",
+                        "name": "Platinum Residences",
+                        "description": "Ultra-modern penthouses with exclusive amenities"
+                    }
+                }
+            ]
+        }
+    }
+    </scrip> -->
+    <script>
+        // ===== CONFIG: Set your default sheet here =====
+        let SUBMIT_SHEET = 'Hyde Park All'; // Default sheet name
+
+        // Function to open modal with selected project
+
+        // You can change this logic:
+        // - Based on URL: ?project=merasee
+        // - Based on campaign, cookie, etc.
+
+        // Example: Change sheet based on URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlProject = urlParams.get('project');
+        if (urlProject) {
+            SUBMIT_SHEET = decodeURIComponent(urlProject); // e.g., ?project=مراسي
+        }
+
+        // ===== Show Modal Automatically =====
+        document.addEventListener("DOMContentLoaded", function () {
+            const exampleModal = document.getElementById('exampleModal');
+
+            // Update the form's onSubmit to use the dynamic sheet
+            const form = document.getElementById('contactForm');
+            form.onsubmit = function (e) {
+                handleSubmit(e, SUBMIT_SHEET);
+            };
+
+            // Show modal after 1 second
+            setTimeout(() => {
+                const modal = new bootstrap.Modal(exampleModal);
+                modal.show();
+            }, 1000);
+        });
+        function setSheetAndOpen(sheet) {
+            SUBMIT_SHEET = sheet;
+
+            const projectInput = document.querySelector('input[name="project"]');
+            // Optional: Update hidden input if you have one
+            if (projectInput) {
+                projectInput.value = sheet;
+            }
+            document.getElementById('displayedProject').textContent = projectInput.value;
+            if (projectInput.value == "Hyde Park All") {
+                console.log('ssss');
+
+                document.getElementById('modal-title').style.display = 'none';
+            } else {
+                console.log('ss');
+
+                console.log(
+                    projectInput
+                );
+
+                document.getElementById('modal-title').style.display = 'block';
+            }
+            // Open modal
+            const exampleModal = document.getElementById('exampleModal');
+            const modal = bootstrap.Modal.getInstance(exampleModal) || new bootstrap.Modal(exampleModal);
+            modal.show();
+        }
+
+    </script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setSheetAndOpen('Hyde Park All');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

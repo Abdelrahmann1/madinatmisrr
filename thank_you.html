@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thank-you</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PNWLZ9LT');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .thank-you {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .thank-you h1 {
+            color: #31353d;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .thank-you p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .thank-you a.home-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #31353d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .thank-you a.home-btn:hover {
+            background-color: #31353d;
+        }
+
+        @media (max-width: 480px) {
+            .thank-you {
+                padding: 20px;
+            }
+
+            .thank-you h1 {
+                font-size: 20px;
+            }
+
+            .thank-you p {
+                font-size: 14px;
+            }
+
+            .thank-you a.home-btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Floating Buttons */
+        .floating-btn {
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 26px;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn {
+            bottom: 90px;
+            left: 20px;
+            background-color: #25D366;
+            font-size: 28px;
+        }
+
+        .call-btn {
+            bottom: 20px;
+            left: 20px;
+            background-color: #31353d;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNWLZ9LT"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+
+
+    <div class="thank-you">
+        <h1>شكراً لك!</h1>
+        <p>تم إرسال طلبك بنجاح وسنقوم بالتواصل معك قريباً.</p>
+        <a href="index.html" class="home-btn">العودة إلى الصفحة الرئيسية</a>
+    </div>
+
+    <div class="floating-icons">
+        <!-- ✅ أيقونة واتساب -->
+        <a href="https://wa.me/201234567890?text=مرحبا،%20اريد%20الاستفسار%20عن%20مشروعكم." target="_blank"
+            class="whatsapp" aria-label="WhatsApp">
+            <img src="assets/imgs/whatsapp.png" loading="lazy" alt="WhatsApp">
+        </a>
+
+        <!-- ✅ أيقونة تليفون -->
+        <a href="tel:+201050564000" class="phone" aria-label="Phone">
+            <img src="assets/imgs/phone-call.png" loading="lazy" alt="Phone">
+        </a>
+    </div>
+
+</body>
+
+</html>
