@@ -1,5 +1,40 @@
 // Premium Real Estate Landing Page JavaScript
+let SUBMIT_SHEET = 'Hyde Park All'; // Default sheet name
+const urlParams = new URLSearchParams(window.location.search);
+const urlProject = urlParams.get('project');
+if (urlProject) {
+    SUBMIT_SHEET = decodeURIComponent(urlProject); // e.g., ?project=مراسي
+}
+function setSheetAndOpen(sheet) {
+    SUBMIT_SHEET = sheet;
 
+    const projectInput = document.querySelector('input[name="project"]');
+    // Optional: Update hidden input if you have one
+    if (projectInput) {
+        projectInput.value = sheet;
+    }
+    document.getElementById('displayedProject').textContent = projectInput.value;
+    if (projectInput.value == "Hyde Park All") {
+        console.log('ssss');
+
+        document.getElementById('modal-title').style.display = 'none';
+    } else {
+        console.log('ss');
+
+        console.log(
+            projectInput
+        );
+
+        document.getElementById('modal-title').style.display = 'block';
+    }
+    // Open modal
+    const exampleModal = document.getElementById('exampleModal');
+    const modal = bootstrap.Modal.getInstance(exampleModal) || new bootstrap.Modal(exampleModal);
+    modal.show();
+}
+document.addEventListener("DOMContentLoaded", function () {
+    setSheetAndOpen('Hyde Park All');
+});
 // Preloader
 window.addEventListener('load', function() {
     const preloader = document.querySelector('.preloader');
@@ -86,40 +121,39 @@ async function handleSubmit(e, sheet) {
   
     console.log(name, phone,sheet);
     
-    // // Show progress bar
-    // const progressContainer = document.getElementById("progressContainer");
-    // progressContainer.classList.remove("d-none");
+    // Show progress bar
+    const progressContainer = document.getElementById("progressContainer");
+    progressContainer.classList.remove("d-none");
   
-    // Send to your PHP backend
-    // try {
-    //   const response = await fetch('./submit-sheet.php', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/x-www-form-urlencoded',
-    //     },
-    //     body: new URLSearchParams({
-    //       name: name,
-    //       phone: phone,
-    //       compound: sheet
-    //     })
-    //   });
+    try {
+      const response = await fetch('./submit-sheet.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          name: name,
+          phone: phone,
+          compound: sheet
+        })
+      });
   
-    //   const result = await response.json();
+      const result = await response.json();
   
-    //   if (result.success) {
-    //     name.value = "";
-    //     phone.value = "";
-    //     showAlert("شكراً لك! تم إرسال بياناتك بنجاح.", "success");
-    //     setTimeout(() => {
-    //       window.location.href = 'thank_you.html';
-    //     }, 1000);
-    //   } else {
-    //     throw new Error(result.error || "Submission failed");
-    //   }
-    // } catch (error) {
-    //   console.error("Error:", error);
-    //   showAlert("حدث خطأ، برجاء المحاولة مرة أخرى.", "danger");
-    // } finally {
-    //   progressContainer.classList.add("d-none");
-    // }
+      if (result.success) {
+        name.value = "";
+        phone.value = "";
+        showAlert("شكراً لك! تم إرسال بياناتك بنجاح.", "success");
+        setTimeout(() => {
+          window.location.href = 'thank_you.html';
+        }, 1000);
+      } else {
+        throw new Error(result.error || "Submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      showAlert("حدث خطأ، برجاء المحاولة مرة أخرى.", "danger");
+    } finally {
+      progressContainer.classList.add("d-none");
+    }
   }

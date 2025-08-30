@@ -82,7 +82,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(49, 53, 61, 0.95);
+    background: rgba(21, 34, 43, 0.85);
     /* من الـ palette */
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -91,7 +91,7 @@ nav {
 }
 
 nav.scrolled {
-    background: rgba(49, 53, 61, 0.95);
+    background: rgba(21, 34, 43, 0.85);
     /* من الـ palette */
     box-shadow: var(--shadow);
 }
@@ -361,7 +361,17 @@ section {
     gap: 2rem;
     margin-top: 3rem;
 }
-
+.featured {
+    grid-column: 1 / -1; /* Ensures it spans full grid width */
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: row;
+  }
+  .featured .project-image{
+        flex: 1 !important;
+        height: auto;
+        min-width: 50%;
+  }
 .project-card {
     background: white;
     border-radius: 20px;
