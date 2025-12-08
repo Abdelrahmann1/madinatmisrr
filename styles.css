@@ -617,6 +617,11 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .featured {
+        width: 100%; /* Full width */
+        flex-direction: column;
+      }
+    
     .nav-links {
         display: none;
         position: absolute;
@@ -760,7 +765,7 @@ img {
 
 .contact-image {
     width: 100%;        /* تخليها تاخد عرض كامل */
-    height: 66%;       /* يحافظ على التناسق */
+    height: 75%;       /* يحافظ على التناسق */
     border-radius: 15px; /* حواف دائرية */
     object-fit: cover;   /* يملأ المساحة بدون تشويه */
     box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* ظل جميل */
@@ -777,3 +782,20 @@ img {
     
         }
 
+        #alertContainer {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 10000;
+            width: 350px;
+          }
+          #alertContainer .alert {
+            margin-bottom: 10px;
+            max-width: 350px;
+            padding: 12px 16px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+          }
+          

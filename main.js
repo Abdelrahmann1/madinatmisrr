@@ -1,12 +1,8 @@
 // Premium Real Estate Landing Page JavaScript
-let SUBMIT_SHEET = 'Hyde Park All'; // Default sheet name
 const urlParams = new URLSearchParams(window.location.search);
 const urlProject = urlParams.get('project');
-if (urlProject) {
-    SUBMIT_SHEET = decodeURIComponent(urlProject); // e.g., ?project=مراسي
-}
+
 function setSheetAndOpen(sheet) {
-    SUBMIT_SHEET = sheet;
 
     const projectInput = document.querySelector('input[name="project"]');
     // Optional: Update hidden input if you have one
@@ -14,12 +10,9 @@ function setSheetAndOpen(sheet) {
         projectInput.value = sheet;
     }
     document.getElementById('displayedProject').textContent = projectInput.value;
-    if (projectInput.value == "Hyde Park All") {
-        console.log('ssss');
-
+    if (projectInput.value == "mnhd all") {
         document.getElementById('modal-title').style.display = 'none';
     } else {
-        console.log('ss');
 
         console.log(
             projectInput
@@ -33,7 +26,9 @@ function setSheetAndOpen(sheet) {
     modal.show();
 }
 document.addEventListener("DOMContentLoaded", function () {
-    setSheetAndOpen('Hyde Park All');
+    setTimeout(function() {
+        setSheetAndOpen('mnhd all');
+    }, 5000); // 5000ms = 5 seconds
 });
 // Preloader
 window.addEventListener('load', function() {
@@ -110,7 +105,7 @@ async function handleSubmit(e, sheet) {
             
         }
     }else{
-        console.log("all");
+        console.log("errorall");
         
     }
     // // Validate inputs
@@ -118,7 +113,8 @@ async function handleSubmit(e, sheet) {
       showAlert("الرجاء إدخال الاسم ورقم الهاتف.", "warning");
       return;
     }
-  
+    const preloader = document.querySelector('.preloader');
+    preloader.classList.remove('hidden');
     console.log(name, phone,sheet);
     
     // Show progress bar
@@ -139,21 +135,63 @@ async function handleSubmit(e, sheet) {
       });
   
       const result = await response.json();
-  
       if (result.success) {
         name.value = "";
         phone.value = "";
-        showAlert("شكراً لك! تم إرسال بياناتك بنجاح.", "success");
-        setTimeout(() => {
           window.location.href = 'thank_you.html';
-        }, 1000);
+      preloader.classList.add('hidden');
+
       } else {
         throw new Error(result.error || "Submission failed");
+          preloader.classList.add('hidden');
+
       }
     } catch (error) {
       console.error("Error:", error);
+      preloader.classList.add('hidden');
       showAlert("حدث خطأ، برجاء المحاولة مرة أخرى.", "danger");
     } finally {
       progressContainer.classList.add("d-none");
+      preloader.classList.add('hidden');
     }
+  }
+  function showAlert(message, type) {
+    const alertContainer = document.getElementById("alertContainer");
+  
+    // Clear any existing alerts
+    while (alertContainer.firstChild) {
+      alertContainer.firstChild.remove();
+    }
+  
+    if (!message || !type) return;
+  
+    const alertDiv = document.createElement("div");
+    alertDiv.className = `alert alert-${type} alert-dismissible fade`;
+    alertDiv.role = "alert";
+    alertDiv.innerHTML = `
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      ${message}
+    `;
+  
+    alertContainer.appendChild(alertDiv);
+  
+    // Trigger reflow to enable transition
+    void alertDiv.offsetWidth;
+  
+    // Trigger fade-in
+    alertDiv.classList.add("show");
+  
+    // Auto-close after 10 seconds
+    const AUTO_CLOSE_DELAY = 10000;
+    // This runs AFTER the fade-out animation completes
+    if (type === "success") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setTimeout(() => {
+      const bsAlert = bootstrap.Alert.getOrCreateInstance(alertDiv);
+      bsAlert.close(); // Starts fade-out
+    }, AUTO_CLOSE_DELAY);
+  
+    // ✅ Listen for when Bootstrap finishes removing the alert
+  
   }
