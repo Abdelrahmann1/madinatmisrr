@@ -856,7 +856,7 @@ img {
         .slider-mini {
             position: absolute;
             inset: 0;
-            background-color: #d1d5db;
+            background-color: #ce2934;
             transition: 0.25s;
             border-radius: 22px;
         }
